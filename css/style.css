@@ -2388,6 +2388,15 @@ textarea {
     transition: all 0.3s ease 0s;
   }
 
+  .menu .main-link {
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    height: 41px;
+    left: 25px;
+    top: 25px;
+  }
+
   .menu ul {
     position: absolute;
     left: 25px;
