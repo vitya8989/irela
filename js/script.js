@@ -63,9 +63,29 @@ $('.button__answer-box').click(function(event) {
 			$('.nav__text').hide();
 		}
 	}
+	if(location.toString().indexOf('prices') !== -1) {
+		$('.prices-link').addClass('active-link');
+		if (parseInt($(window).width()) > 768 && parseInt($(window).width()) <= 1280) {
+				$('.nav__menu').addClass('padding-menu');
+		}
+		if (parseInt($(window).width()) < 769) {
+			$('.nav__text').hide();
+		}
+	}
 $(window).scroll(function() {
 	var height = $(window).scrollTop();
-	if (parseInt($(window).width()) > 1024) {
+	if (parseInt($(window).width()) > 1280) {
+		if (height > 660) {
+			$('.nav').addClass('nav-fixed');
+		} else {
+			$('.nav').removeClass('nav-fixed');
+		}
+		if (height > 680) {
+			$('.nav').addClass('nav-visible');
+		} else {
+			$('.nav').removeClass('nav-visible');
+		}
+	} else if (parseInt($(window).width()) > 1024  && parseInt($(window).width()) <= 1280) {
 		if (height > 600) {
 			$('.nav').addClass('nav-fixed');
 		} else {
@@ -95,11 +115,15 @@ $('.nav__burger').click(function(event){
 });;
 $('.order-call').click(function(event) {
 	$('.popup').addClass('popup-open');
-	$('.popup__ordercall').addClass('ordercall-appear');
+	$('.order').addClass('ordercall-appear');
 	if (parseInt($(window).width()) < 769) {
 		$('.menu').removeClass('menu-open');
 		$('.nav__burger').removeClass('burger-open');
 	};
+});
+$('.writeMessage').click(function(event) {
+	$('.popup3').addClass('popup-open');
+	$('.write').addClass('ordercall-appear');
 });
 $('.popup').click(function(event) {
 	if($(event.target).children('.order').length){
@@ -115,11 +139,23 @@ $('.popup2').click(function(event) {
 	$('.popup__submited').removeClass('submited-appear');
 	}
 });
+$('.popup3').click(function(event) {
+	if($(event.target).children('.write').length){
+	$('.popup3').removeClass('popup-open');
+	$('.popup__write').removeClass('ordercall-appear');
+	$('.form-name2').removeClass('error-input');
+	$('.form-email').removeClass('error-input');
+	}
+});
 $('.close-popup').click(function(event) {
 	$('.popup').removeClass('popup-open');
 	$('.popup__ordercall').removeClass('ordercall-appear');
+	$('.popup3').removeClass('popup-open');
+	$('.popup__write').removeClass('ordercall-appear');
 	$('.form-name').removeClass('error-input');
 	$('.form-tel').removeClass('error-input');
+	$('.form-name2').removeClass('error-input');
+	$('.form-email').removeClass('error-input');
 	$('.popup2').removeClass('popup-open');
 	$('.popup__submited').removeClass('submited-appear');
 });
@@ -127,9 +163,15 @@ $('.close-popup').click(function(event) {
 
 let formNameBox = document.querySelector('.form-name');
 let formTelBox = document.querySelector('.form-tel');
+let formName2Box = document.querySelector('.form-name2');
+let formEmailBox = document.querySelector('.form-email');
 let formName = document.order__form.name;
 let formTel = document.order__form.tel;
 let formComment = document.order__form.comment;
+let formName2 = document.write__form.name;
+let formEmail = document.write__form.email;
+let formComment2 = document.write__form.comment;
+
 
 function validate_form(){
 	let valid = true;
@@ -144,6 +186,19 @@ function validate_form(){
 	return valid;
 };
 
+function validate_form2(){
+	let valid = true;
+	if (formName2.value == ""){
+		valid = false;
+		formName2Box.classList.add('error-input');
+	};
+	if (formEmail.value == ""){
+		valid = false;
+		formEmailBox.classList.add('error-input');
+	};
+	return valid;
+};
+
 formName.onfocus = function(){
 	if (formNameBox.classList.contains('error-input')){
 		formNameBox.classList.remove('error-input');
@@ -153,6 +208,17 @@ formName.onfocus = function(){
 formTel.onfocus = function(){
 	if (formTelBox.classList.contains('error-input')){
 		formTelBox.classList.remove('error-input');
+	};
+};
+formName2.onfocus = function(){
+	if (formName2Box.classList.contains('error-input')){
+		formName2Box.classList.remove('error-input');
+	};
+};
+
+formEmail.onfocus = function(){
+	if (formEmailBox.classList.contains('error-input')){
+		formEmailBox.classList.remove('error-input');
 	};
 };
 $('.order__form').submit(function (event) {
@@ -174,6 +240,26 @@ $('.order__form').submit(function (event) {
 		formComment.value = "";
 	};
 });
+$('.write__form').submit(function (event) {
+	event.preventDefault();
+	validate_form2();
+	if (!(formName2Box.classList.contains('error-input') || formEmailBox.classList.contains('error-input'))) {
+		var form_data = $(this).serialize(); 
+		$.ajax({
+			type: "POST",
+			url: "public/script/send.php",
+			data: form_data
+		});
+		$('.popup3').removeClass('popup-open');
+		$('.popup__write').removeClass('ordercall-appear');
+		$('.popup2').addClass('popup-open');
+		$('.popup__submited').addClass('submited-appear');
+		formName2.value = "";
+		formEmail.value = "";
+		formComment2.value = "";
+	};
+});
+
 
 
 /*
