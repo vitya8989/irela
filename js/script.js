@@ -72,6 +72,15 @@ $('.button__answer-box').click(function(event) {
 			$('.nav__text').hide();
 		}
 	}
+		if(location.toString().indexOf('team') !== -1) {
+		$('.team-link').addClass('active-link');
+		if (parseInt($(window).width()) > 768 && parseInt($(window).width()) <= 1280) {
+				$('.nav__menu').addClass('padding-menu');
+		}
+		if (parseInt($(window).width()) < 769) {
+			$('.nav__text').hide();
+		}
+	}
 $(window).scroll(function() {
 	var height = $(window).scrollTop();
 	if (parseInt($(window).width()) > 1280) {
