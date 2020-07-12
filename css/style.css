@@ -2647,7 +2647,11 @@ textarea {
   .pricelist__items .pricelist__item {
     background: none;
     padding: 0 0 30px 0;
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
+  }
+
+  .pricelist__items .pricelist__item:last-child {
+    margin: 0;
   }
 }
 
@@ -2918,6 +2922,7 @@ textarea {
     font-size: 24px;
     line-height: 28px;
     white-space: normal;
+    margin: 0 15px 0 0;
   }
 }
 
