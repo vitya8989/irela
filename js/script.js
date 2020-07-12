@@ -54,20 +54,18 @@ $('.button__answer-box').click(function(event) {
 	$('.calculate__answers-box').hide();
 	$('.calculate__answers').slideDown();
 });;
+	if(location.toString().indexOf('modules') !== -1) {
+		$('.modules-link').addClass('active-link');
+		if (parseInt($(window).width()) > 768 && parseInt($(window).width()) <= 1280) {
+				$('.nav__menu').addClass('padding-menu');
+		}
+		if (parseInt($(window).width()) < 769) {
+			$('.nav__text').hide();
+		}
+	}
 $(window).scroll(function() {
 	var height = $(window).scrollTop();
-	if (parseInt($(window).width()) > 1280) {
-		if (height > 600) {
-			$('.nav').addClass('nav-fixed');
-		} else {
-			$('.nav').removeClass('nav-fixed');
-		}
-		if (height > 720) {
-			$('.nav').addClass('nav-visible');
-		} else {
-			$('.nav').removeClass('nav-visible');
-		}
-	} else if (parseInt($(window).width()) > 1024 && parseInt($(window).width()) <= 1280) {
+	if (parseInt($(window).width()) > 1024) {
 		if (height > 600) {
 			$('.nav').addClass('nav-fixed');
 		} else {
