@@ -1318,11 +1318,16 @@ textarea {
     color: #ffffff;
   }
 
+  .nav.nav-fixed .nav__menu .modules-link.active-link a {
+    color: #ffffff;
+  }
+
   .nav.nav-fixed .nav__menu .modules-link.active-link::before {
     left: 0px;
     bottom: -10px;
     height: 2px;
     width: 100%;
+    background: #ffffff;
   }
 
   .nav.nav-fixed .nav__menu.padding-menu {
