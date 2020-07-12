@@ -207,16 +207,16 @@ body {
   color: #ffffff;
 }
 
-.modules-link {
-  position: relative;
-}
-
-.modules-link.active-link a {
+.menu .active-link a {
   color: #ffffff;
   pointer-events: none;
 }
 
-.modules-link.active-link::before {
+.active-link {
+  position: relative;
+}
+
+.active-link::before {
   content: '';
   position: absolute;
   left: -20px;
@@ -261,12 +261,12 @@ body {
   font-size: 0;
 }
 
-.nav.nav-fixed .modules-link.active-link a {
+.nav.nav-fixed .active-link a {
   color: #000000;
   pointer-events: none;
 }
 
-.nav.nav-fixed .modules-link.active-link::before {
+.nav.nav-fixed .active-link::before {
   content: '';
   position: absolute;
   left: -20px;
@@ -1211,14 +1211,14 @@ textarea {
 
 .descryptions__items {
   display: grid;
-  grid: repeat(5, 1fr)/repeat(2, 1fr);
+  grid: 250px repeat(4, 300px)/repeat(2, 1fr);
   grid-row-gap: 70px;
   grid-column-gap: 80px;
 }
 
 .descryptions__item {
+  background: #f4f4f4;
   position: relative;
-  min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1226,7 +1226,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5px 0 0 12px;
+  padding: 5px 0 25px 12px;
 }
 
 .descryptions__item a {
@@ -1254,7 +1254,7 @@ textarea {
 }
 
 .descryptions__item:first-of-type {
-  padding: 55px 0 0 12px;
+  padding: 5px 0 25px 12px;
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
@@ -1262,7 +1262,7 @@ textarea {
 }
 
 .descryptions__item:first-of-type img {
-  top: 63px;
+  top: 10px;
 }
 
 @media (max-width: 1280px) {
@@ -1318,11 +1318,11 @@ textarea {
     color: #ffffff;
   }
 
-  .nav.nav-fixed .nav__menu .modules-link.active-link a {
+  .nav.nav-fixed .nav__menu .active-link a {
     color: #ffffff;
   }
 
-  .nav.nav-fixed .nav__menu .modules-link.active-link::before {
+  .nav.nav-fixed .nav__menu .active-link::before {
     left: 0px;
     bottom: -10px;
     height: 2px;
@@ -1659,11 +1659,11 @@ textarea {
   }
 
   .descryptions__item:first-of-type {
-    padding: 35px 0 0 12px;
+    padding: 5px 0 25px 12px;
   }
 
   .descryptions__item:first-of-type img {
-    top: 40px;
+    top: 10px;
   }
 }
 
@@ -1781,7 +1781,7 @@ textarea {
     color: #ffffff;
   }
 
-  .modules-link.active-link::before {
+  .active-link::before {
     left: 133px;
     bottom: 5px;
     height: 3px;
@@ -2075,8 +2075,6 @@ textarea {
   }
 
   .descryptions__items {
-    display: grid;
-    grid: repeat(5, 1fr)/repeat(2, 1fr);
     grid-row-gap: 50px;
     grid-column-gap: 40px;
   }
@@ -2084,7 +2082,7 @@ textarea {
 
 @media (max-width: 700px) {
   .descryptions__item:first-of-type {
-    padding: 5px 0 0 12px;
+    padding: 5px 0 25px 12px;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -2423,11 +2421,11 @@ textarea {
   }
 
   .descryptions__item {
-    padding: 5px 0 0 0;
+    padding: 5px 0 25px 5px;
   }
 
   .descryptions__item:first-of-type {
-    padding: 5px 0 0 0;
+    padding: 5px 0 25px 5px;
   }
 }
 
