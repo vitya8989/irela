@@ -3191,6 +3191,11 @@ textarea {
     margin: 0;
   }
 
+  .footer__contacts {
+    display: inline-block;
+    margin: 0;
+  }
+
   .footer__social {
     min-width: 90px;
     display: block;
