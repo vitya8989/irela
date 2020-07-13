@@ -72,8 +72,17 @@ $('.button__answer-box').click(function(event) {
 			$('.nav__text').hide();
 		}
 	}
-		if(location.toString().indexOf('team') !== -1) {
+	if(location.toString().indexOf('team') !== -1) {
 		$('.team-link').addClass('active-link');
+		if (parseInt($(window).width()) > 768 && parseInt($(window).width()) <= 1280) {
+				$('.nav__menu').addClass('padding-menu');
+		}
+		if (parseInt($(window).width()) < 769) {
+			$('.nav__text').hide();
+		}
+	}
+	if(location.toString().indexOf('contacts') !== -1) {
+		$('.contacts-link').addClass('active-link');
 		if (parseInt($(window).width()) > 768 && parseInt($(window).width()) <= 1280) {
 				$('.nav__menu').addClass('padding-menu');
 		}
@@ -86,8 +95,10 @@ $(window).scroll(function() {
 	if (parseInt($(window).width()) > 1280) {
 		if (height > 660) {
 			$('.nav').addClass('nav-fixed');
+			$('#container').css('padding-top', '170px');
 		} else {
 			$('.nav').removeClass('nav-fixed');
+			$('#container').css('padding-top', '0');
 		}
 		if (height > 680) {
 			$('.nav').addClass('nav-visible');
@@ -97,8 +108,10 @@ $(window).scroll(function() {
 	} else if (parseInt($(window).width()) > 1024  && parseInt($(window).width()) <= 1280) {
 		if (height > 600) {
 			$('.nav').addClass('nav-fixed');
+			$('#container').css('padding-top', '170px');
 		} else {
 			$('.nav').removeClass('nav-fixed');
+			$('#container').css('padding-top', '0');
 		}
 		if (height > 620) {
 			$('.nav').addClass('nav-visible');
@@ -108,8 +121,10 @@ $(window).scroll(function() {
 	} else if (parseInt($(window).width()) > 768 && parseInt($(window).width()) <= 1024) {
 		if (height > 560) {
 			$('.nav').addClass('nav-fixed');
+			$('#container').css('padding-top', '170px');
 		} else {
 			$('.nav').removeClass('nav-fixed');
+			$('#container').css('padding-top', '0');
 		}
 		if (height > 570) {
 			$('.nav').addClass('nav-visible');
@@ -168,7 +183,22 @@ $('.close-popup').click(function(event) {
 	$('.popup2').removeClass('popup-open');
 	$('.popup__submited').removeClass('submited-appear');
 });
-
+$('.write-letter').click(function(event) {
+	$('.write_letter-box').removeClass('active-box');
+	$('.return-box').addClass('active-box');
+	$('.contacts__map').removeClass('active-window');
+	$('.contacts__write').addClass('active-window');
+});
+$('.return-map').click(function(event) {
+	$('.return-box').removeClass('active-box');
+	$('.write_letter-box').addClass('active-box');
+	$('.contacts__write').removeClass('active-window');
+	$('.contacts__submited').removeClass('active-window');
+	$('.contacts__map').addClass('active-window');
+});
+if (parseInt($(window).width()) < 531) {
+	$('.contacts__write').addClass('active-window');
+} 
 
 let formNameBox = document.querySelector('.form-name');
 let formTelBox = document.querySelector('.form-tel');
@@ -224,7 +254,6 @@ formName2.onfocus = function(){
 		formName2Box.classList.remove('error-input');
 	};
 };
-
 formEmail.onfocus = function(){
 	if (formEmailBox.classList.contains('error-input')){
 		formEmailBox.classList.remove('error-input');
@@ -259,10 +288,15 @@ $('.write__form').submit(function (event) {
 			url: "public/script/send.php",
 			data: form_data
 		});
-		$('.popup3').removeClass('popup-open');
-		$('.popup__write').removeClass('ordercall-appear');
-		$('.popup2').addClass('popup-open');
-		$('.popup__submited').addClass('submited-appear');
+		if(location.toString().indexOf('contacts') !== -1) {
+			$('.contacts__write').removeClass('active-window');
+			$('.contacts__submited').addClass('active-window');
+		} else {
+			$('.popup3').removeClass('popup-open');
+			$('.popup__write').removeClass('ordercall-appear');
+			$('.popup2').addClass('popup-open');
+			$('.popup__submited').addClass('submited-appear');
+		};
 		formName2.value = "";
 		formEmail.value = "";
 		formComment2.value = "";
@@ -282,3 +316,207 @@ $('.write__form').submit(function (event) {
 jQuery(function(){
 	jQuery('textarea').autoResize();
 });;
+function initMap() {
+	var pos = {lat: 55.7447264, lng: 37.5962162};
+	var opt = {
+		center: pos,
+		zoom: 17,
+		styles: [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#212121"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#212121"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#181818"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1b1b1b"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#2c2c2c"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#8a8a8a"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#373737"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#3c3c3c"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4e4e4e"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#000000"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#3d3d3d"
+      }
+    ]
+  }
+]
+	}
+	var map = new google.maps.Map(document.getElementById("map"), opt);
+	var marker = new google.maps.Marker({
+		position: pos,
+		map: map,
+		icon: '../img/icons/marker.svg'
+	});
+};
+if (parseInt($(window).width()) < 531) {
+	$('.contacts__windows').appendTo('.contacts');
+	$('.footer').appendTo('.contacts');
+	$('.contacts__write').addClass('active-window');
+};
