@@ -983,7 +983,6 @@ body {
 }
 
 .order__form p {
-  min-height: 60px;
   border-bottom: 3px solid #000000;
   position: relative;
   min-width: 620px;
@@ -994,8 +993,8 @@ body {
 }
 
 .order__form input,
-textarea {
-  padding: 10px 0 0 0;
+.order__form textarea {
+  padding: 10px 0 10px 0;
   font-size: 24px;
   line-height: 40px;
   width: 100%;
@@ -1552,7 +1551,6 @@ textarea {
 }
 
 .write__form p {
-  min-height: 60px;
   border-bottom: 3px solid #000000;
   position: relative;
   min-width: 620px;
@@ -1564,7 +1562,7 @@ textarea {
 
 .write__form input,
 .write__form textarea {
-  padding: 10px 0 0 0;
+  padding: 10px 0 10px 0;
   font-size: 24px;
   line-height: 40px;
   width: 100%;
@@ -2348,7 +2346,6 @@ input:-webkit-autofill {
 
   .order__form p {
     min-width: 480px;
-    min-height: 40px;
   }
 
   .popup__close {
@@ -2357,10 +2354,10 @@ input:-webkit-autofill {
   }
 
   .order__form input,
-  textarea {
-    padding: 10px 0 0 0;
+  .order__form textarea {
+    padding: 10px 0 10px 0;
     font-size: 20px;
-    line-height: 36px;
+    line-height: 26px;
     width: 100%;
   }
 
@@ -2407,7 +2404,6 @@ input:-webkit-autofill {
 
   .write__form p {
     min-width: 480px;
-    min-height: 40px;
   }
 
   .popup__close {
@@ -2417,8 +2413,10 @@ input:-webkit-autofill {
 
   .write__form input,
   .write__form textarea {
-    padding: 10px 0 0 0;
+    padding: 10px 0 10px 0;
     width: 100%;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .submit-btn2 input {
@@ -2941,19 +2939,24 @@ input:-webkit-autofill {
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
 
-  .order__form p:last-of-type {
+  .submit-btn {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    border: none;
-  }
-
-  .order__form textarea {
-    border-bottom: 3px solid #000000;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   .order__title {
@@ -3094,19 +3097,24 @@ input:-webkit-autofill {
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
 
-  .write__form p:last-of-type {
+  .submit-btn2 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    border: none;
-  }
-
-  .write__form textarea {
-    border-bottom: 3px solid #000000;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   .write__title {
@@ -3121,7 +3129,6 @@ input:-webkit-autofill {
 
   .write__form p {
     min-width: 0;
-    min-height: 40px;
   }
 
   .submit-btn2 {
