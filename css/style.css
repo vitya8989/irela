@@ -1991,8 +1991,8 @@ textarea {
 }
 
 .contacts__write input,
-textarea {
-  background: none;
+.contacts__write textarea {
+  background: transparent;
 }
 
 .write__title-white {
@@ -2017,6 +2017,10 @@ textarea {
 
 .black-input::placeholder {
   color: #000000;
+}
+
+.black-input:focus {
+  background: transparent;
 }
 
 .submit-btn3 {
@@ -2087,6 +2091,18 @@ textarea {
 
 .contacts__adress {
   display: none;
+}
+
+input.black-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+          box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-transition: background-color 50000000000s ease-in-out 0s;
+  transition: background-color 50000000000s ease-in-out 0s;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #fff;
+          box-shadow: inset 0 0 0 50px #fff;
 }
 
 @media (max-width: 1280px) {
