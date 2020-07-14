@@ -2254,7 +2254,7 @@ input:-webkit-autofill {
   position: relative;
   max-width: 700px;
   margin: 0 auto;
-  padding: 85px 30px 0 30px;
+  padding: 65px 30px 0 30px;
 }
 
 .error__title {
@@ -2268,13 +2268,17 @@ input:-webkit-autofill {
   position: absolute;
   width: 66px;
   right: 5px;
-  top: 85px;
+  top: 65px;
 }
 
 .error__logosvg {
   fill: #000;
   width: 100%;
   height: 100%;
+}
+
+.error__logosvg:hover {
+  fill: #E488A1;
 }
 
 .error__text {
@@ -2288,6 +2292,10 @@ input:-webkit-autofill {
   display: inline-block;
   padding: 0 0 3px 0;
   border-bottom: 2px solid #E488A1;
+}
+
+.error__text a:hover {
+  color: #E488A1;
 }
 
 @media (max-width: 1280px) {
