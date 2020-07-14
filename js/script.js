@@ -520,3 +520,4 @@ if (parseInt($(window).width()) < 531) {
 	$('.footer').appendTo('.contacts');
 	$('.contacts__write').addClass('active-window');
 };
+;
