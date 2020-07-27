@@ -2883,6 +2883,9 @@ input:-webkit-autofill {
 
 .slick-dots li.slick-active {
   border-bottom: 3px solid #000000;
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
 }
 
 /* Элемент точки */
