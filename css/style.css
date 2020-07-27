@@ -1971,6 +1971,18 @@ body {
   z-index: 2;
 }
 
+.map__adress button {
+  display: none;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  color: #ffffff;
+  z-index: 2;
+  margin: 10px 0 0 0;
+  border-bottom: 2px solid #ffffff;
+  padding: 0 0 5px 0;
+}
+
 .contacts__write {
   position: relative;
   z-index: 3;
@@ -4549,9 +4561,11 @@ input:-webkit-autofill {
     max-width: 270px;
   }
 
-  .contacts__adress a {
+  .contacts__adress button {
     display: inline-block;
     color: #FFFFFF;
+    font-size: 18px;
+    line-height: 26px;
     border-bottom: 1px solid #E488A1;
     padding: 0 0 10px 0;
   }
@@ -4560,8 +4574,33 @@ input:-webkit-autofill {
     height: 370px;
   }
 
+  .contacts__windows.open-map {
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .contacts__windows.open-map .contacts__map {
+    display: block;
+  }
+
+  .contacts__windows.open-map .contacts__map .gm-control-active {
+    display: none;
+  }
+
+  .contacts__windows.open-map .map__adress {
+    display: block;
+  }
+
   .map__adress {
     display: none;
+  }
+
+  .map__adress button {
+    display: block;
   }
 
   .contacts__write {
