@@ -516,7 +516,7 @@ function initMap() {
 	var marker = new google.maps.Marker({
 		position: pos,
 		map: map,
-		icon: '../img/icons/marker.svg'
+		icon: 'img/icons/marker.svg',
 	});
 };
 if (parseInt($(window).width()) < 531) {
