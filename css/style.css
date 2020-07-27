@@ -4578,7 +4578,7 @@ input:-webkit-autofill {
     width: 100vw;
     height: 100vh;
     z-index: 5;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
   }
@@ -4593,6 +4593,7 @@ input:-webkit-autofill {
 
   .contacts__windows.open-map .map__adress {
     display: block;
+    margin: 0 0 0 15px;
   }
 
   .map__adress {
