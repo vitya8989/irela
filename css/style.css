@@ -488,7 +488,7 @@ body {
 .download__button {
   display: block;
   width: 300px;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   border: 2px solid #FFFFFF;
   font-weight: bold;
   font-size: 20px;
@@ -685,7 +685,7 @@ body {
   text-align: center;
   color: #FFFFFF;
   border: 2px solid #FFFFFF;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -746,7 +746,7 @@ body {
 .technologies__text a::before {
   content: '';
   position: absolute;
-  top: 35px;
+  top: 24px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -764,7 +764,7 @@ body {
   width: 239px;
   height: 2px;
   left: 20px;
-  top: 325px;
+  top: 316px;
   background: #ffffff;
   opacity: 0.5;
 }
@@ -1057,7 +1057,7 @@ body {
   width: 100%;
   text-align: center;
   border: 2px solid #000000;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -1166,7 +1166,7 @@ body {
   width: 100%;
   text-align: center;
   border: 2px solid #000000;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -1354,7 +1354,7 @@ body {
   text-align: center;
   color: #FFFFFF;
   border: 2px solid #FFFFFF;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -1625,7 +1625,7 @@ body {
   width: 100%;
   text-align: center;
   border: 2px solid #000000;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -1812,7 +1812,7 @@ body {
   border: 2px solid #000000;
   color: #FFFFFF;
   background: #000000;
-  padding: 15px 0 30px 0;
+  padding: 22.5px 0 22.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -1921,7 +1921,7 @@ body {
   color: #FFFFFF;
   text-align: center;
   border: 2px solid #FFFFFF;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -2059,7 +2059,7 @@ body {
   width: 100%;
   text-align: center;
   border: 2px solid #ffffff;
-  padding: 0 0 13px 0;
+  padding: 6.5px 0 6.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -2304,7 +2304,6 @@ input:-webkit-autofill {
 .error__text a {
   color: #000000;
   display: inline-block;
-  padding: 0 0 3px 0;
   border-bottom: 2px solid #E488A1;
 }
 
@@ -2387,7 +2386,7 @@ input:-webkit-autofill {
   color: #FFFFFF;
   text-align: center;
   border: 2px solid #FFFFFF;
-  padding: 0 0 15px 0;
+  padding: 7.5px 0 7.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -2703,7 +2702,6 @@ input:-webkit-autofill {
   line-height: 26px;
   color: #000000;
   display: inline-block;
-  padding: 0 0 7px 0;
   border-bottom: 2px solid #E488A1;
 }
 
@@ -2720,12 +2718,16 @@ input:-webkit-autofill {
   margin: 0 0 107px 0;
 }
 
+.case__slider-item img {
+  width: 100%;
+}
+
 .return-modules-btn span {
   display: inline-block;
   width: 437px;
   height: 3px;
   background: #ffffff;
-  margin: 0 30px 0 0;
+  margin: 0 30px 7px 0;
   position: relative;
 }
 
@@ -2777,7 +2779,7 @@ input:-webkit-autofill {
   color: #FFFFFF;
   background: #000000;
   border: 2px solid #000000;
-  padding: 15px 0 30px 0;
+  padding: 7.5px 0 7.5px 0;
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.1s ease 0s;
   -o-transition: color 0.3s ease 0s, background 0.3s ease 0s, transform 0.1s ease 0s;
@@ -3125,7 +3127,7 @@ input:-webkit-autofill {
   }
 
   .technologies__image::before {
-    top: 243px;
+    top: 234px;
   }
 
   .footer__row {
@@ -3172,7 +3174,7 @@ input:-webkit-autofill {
   .submit-btn input {
     font-size: 20px;
     line-height: 31px;
-    padding: 0 0 13px 0;
+    padding: 6.5px 0 6.5px 0;
   }
 
   .popup__submited {
@@ -3228,7 +3230,7 @@ input:-webkit-autofill {
   }
 
   .submit-btn2 input {
-    padding: 0 0 13px 0;
+    padding: 6.5px 0 6.5px 0;
   }
 
   .team-people__container {
@@ -3261,7 +3263,7 @@ input:-webkit-autofill {
   }
 
   .submit-btn3 input {
-    padding: 0 0 13px 0;
+    padding: 6.5px 0 6.5px 0;
   }
 
   .write__body {
@@ -3287,6 +3289,10 @@ input:-webkit-autofill {
     width: 66px;
     right: 5px;
     top: 55px;
+  }
+
+  .return-modules-btn span {
+    width: 240px;
   }
 }
 
@@ -3331,6 +3337,16 @@ input:-webkit-autofill {
   }
 }
 
+@media (max-width: 960px) {
+  .case__img:first-child {
+    margin: 0;
+  }
+
+  .case__img:last-child {
+    margin: 0;
+  }
+}
+
 @media (max-width: 920px) {
   .nav.nav-fixed .nav__container {
     padding: 0 15px;
@@ -3344,6 +3360,14 @@ input:-webkit-autofill {
   .nav.nav-fixed .menu li a,
   .nav.nav-fixed .menu li button {
     font-size: 14px;
+  }
+
+  .case__slider-item {
+    max-width: 500px;
+  }
+
+  .slick-list {
+    max-width: 500px;
   }
 }
 
@@ -3436,6 +3460,31 @@ input:-webkit-autofill {
 
   .descryptions__item:first-of-type img {
     top: 10px;
+  }
+}
+
+@media (max-width: 840px) {
+  .case__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+
+  .case__items:nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0 0 50px 0;
+  }
+
+  .case__item {
+    margin: 30px 0 0 0;
   }
 }
 
@@ -4097,7 +4146,7 @@ input:-webkit-autofill {
   }
 
   .search__container {
-    padding: 0 25px;
+    padding: 0 20px;
   }
 
   .search__content {
@@ -4131,6 +4180,42 @@ input:-webkit-autofill {
 
   .want-box {
     width: 100%;
+  }
+
+  .intruder__items {
+    padding: 40px 0 0 0;
+  }
+
+  .case {
+    padding: 40px 0 0 0;
+  }
+
+  .case__slider {
+    margin: 0 0 55px 0;
+  }
+
+  .case__slider-item {
+    max-width: 320px;
+  }
+
+  .return-modules-btn span {
+    display: none;
+  }
+
+  .return-modules-btn {
+    font-size: 20px;
+  }
+
+  .slick-list {
+    max-width: 320px;
+  }
+
+  .slick-slide {
+    padding: 0;
+  }
+
+  .slick-dots {
+    margin: 30px 0 0 0;
   }
 }
 
@@ -4189,6 +4274,44 @@ input:-webkit-autofill {
   }
 }
 
+@media (max-width: 680px) {
+  .intruder__container {
+    padding: 0 20px;
+  }
+
+  .intruder__items {
+    display: block;
+  }
+
+  .intruder__item:first-child {
+    padding: 0;
+  }
+
+  .intruder__item:last-child {
+    margin: 45px 0 0 0;
+  }
+
+  .intruder__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .intruder__text.big-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .item__li li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .caseitem__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 @media (max-width: 650px) {
   .calculate__question {
     min-width: 43.76%;
@@ -4229,6 +4352,20 @@ input:-webkit-autofill {
 
   .managing__image a {
     right: 11px;
+  }
+}
+
+@media (max-width: 640px) {
+  .case__container {
+    padding: 0 20px;
+  }
+
+  .case__title:nth-child(4) {
+    margin: 0 0 80px 0;
+  }
+
+  .slick-arrow {
+    top: -40px;
   }
 }
 
@@ -4354,7 +4491,7 @@ input:-webkit-autofill {
   .team__btn {
     font-size: 20px;
     line-height: 31px;
-    padding: 5px 0 14px 0;
+    padding: 9.5px 0 9.5px 0;
   }
 
   .team-people__developing {
@@ -4435,7 +4572,7 @@ input:-webkit-autofill {
 
   .button__answer-box {
     width: 100%;
-    padding: 0 0 13px 0;
+    padding: 6.5px 0 6.5px 0;
     font-weight: bold;
     font-size: 20px;
     line-height: 31px;
@@ -4540,7 +4677,7 @@ input:-webkit-autofill {
   .technologies__image::before {
     width: 165px;
     left: 55%;
-    top: 224px;
+    top: 212px;
   }
 
   .technologies__image a {
@@ -4812,7 +4949,7 @@ input:-webkit-autofill {
   }
 
   .function__container {
-    padding: 0 25px;
+    padding: 0 20px;
   }
 
   .function__top {
@@ -5056,6 +5193,14 @@ input:-webkit-autofill {
 
   .calculate__question {
     padding: 6px 0 24px 0;
+  }
+
+  .case__slider-item {
+    max-width: 280px;
+  }
+
+  .slick-list {
+    max-width: 280px;
   }
 }
 
