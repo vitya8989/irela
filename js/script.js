@@ -91,6 +91,7 @@ $('.button__answer-box').click(function(event) {
 		}
 	}
 	if(location.toString().indexOf('search') !== -1) {
+		$('.wantModule').addClass('searchPage');
 		if (parseInt($(window).width()) < 769) {
 			$('.nav__text').hide();
 		}
@@ -177,6 +178,14 @@ $('.popup3').click(function(event) {
 	$('.form-email').removeClass('error-input');
 	}
 });
+$('.want-popup').click(function(event) {
+	if($(event.target).children('.want-popup__content').length){
+	$('.want-popup').removeClass('popup-open');
+	$('.want-popup__content').removeClass('ordercall-appear');
+	$('.form-name3').removeClass('error-input');
+	$('.form-tel3').removeClass('error-input');
+	}
+});
 $('.close-popup').click(function(event) {
 	$('.popup').removeClass('popup-open');
 	$('.popup__ordercall').removeClass('ordercall-appear');
@@ -188,6 +197,8 @@ $('.close-popup').click(function(event) {
 	$('.form-email').removeClass('error-input');
 	$('.popup2').removeClass('popup-open');
 	$('.popup__submited').removeClass('submited-appear');
+	$('.want-popup').removeClass('popup-open');
+	$('.want-popup__content').removeClass('ordercall-appear');
 });
 $('.write-letter').click(function(event) {
 	$('.write_letter-box').removeClass('active-box');
@@ -202,15 +213,24 @@ $('.return-map').click(function(event) {
 	$('.contacts__submited').removeClass('active-window');
 	$('.contacts__map').addClass('active-window');
 });
+$('.wantThis').click(function(event) {
+	$('.want-popup').addClass('popup-open');
+	$('.want-popup__content').addClass('ordercall-appear');
+});
 
 
 let formNameBox = document.querySelector('.form-name');
 let formTelBox = document.querySelector('.form-tel');
 let formName2Box = document.querySelector('.form-name2');
 let formEmailBox = document.querySelector('.form-email');
+let formNameBox3 = document.querySelector('.form-name3');
+let formTelBox3 = document.querySelector('.form-tel3');
 let formName = document.order__form.name;
 let formTel = document.order__form.tel;
 let formComment = document.order__form.comment;
+let formName3 = document.order__form3.name3;
+let formTel3 = document.order__form3.tel3;
+let formComment3 = document.order__form3.comment3;
 let formName2 = document.write__form.name;
 let formEmail = document.write__form.email;
 let formComment2 = document.write__form.comment;
@@ -242,6 +262,19 @@ function validate_form2(){
 	return valid;
 };
 
+function validate_form3(){
+	let valid = true;
+	if (formName3.value == ""){
+		valid = false;
+		formNameBox3.classList.add('error-input');
+	};
+	if (formTel3.value == ""){
+		valid = false;
+		formTelBox3.classList.add('error-input');
+	};
+	return valid;
+};
+
 formName.onfocus = function(){
 	if (formNameBox.classList.contains('error-input')) {
 		formNameBox.classList.remove('error-input');
@@ -251,6 +284,17 @@ formName.onfocus = function(){
 formTel.onfocus = function(){
 	if (formTelBox.classList.contains('error-input')) {
 		formTelBox.classList.remove('error-input');
+	};
+};
+formName3.onfocus = function(){
+	if (formNameBox3.classList.contains('error-input')) {
+		formNameBox3.classList.remove('error-input');
+	};
+};
+
+formTel3.onfocus = function(){
+	if (formTelBox3.classList.contains('error-input')) {
+		formTelBox3.classList.remove('error-input');
 	};
 };
 formName2.onfocus = function(){
@@ -282,6 +326,25 @@ $('.order__form').submit(function (event) {
 		formComment.value = "";
 	};
 });
+$('.order__form3').submit(function (event) {
+	event.preventDefault();
+	validate_form();
+	if (!(formNameBox3.classList.contains('error-input') || formTelBox3.classList.contains('error-input'))) {
+		var form_data = $(this).serialize(); 
+		$.ajax({
+			type: "POST",
+			url: "public/script/send.php",
+			data: form_data
+		});
+		$('.want-popup').removeClass('popup-open');
+		$('.want-popup__content').removeClass('ordercall-appear');
+		$('.popup2').addClass('popup-open');
+		$('.popup__submited').addClass('submited-appear');
+		formName3.value = "";
+		formTel3.value = "";
+		formComment3.value = "";
+	};
+});
 $('.write__form').submit(function (event) {
 	event.preventDefault();
 	validate_form2();
@@ -306,7 +369,6 @@ $('.write__form').submit(function (event) {
 		formComment2.value = "";
 	};
 });
-
 
 
 /*
@@ -554,3 +616,4 @@ $(document).ready(function(){
 		]*/
 	});
 });;
+;
