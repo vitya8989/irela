@@ -3232,7 +3232,8 @@ input:-webkit-autofill {
   }
 
   .technologies__image::before {
-    top: 234px;
+    top: 237px;
+    width: 211px;
   }
 
   .footer__row {

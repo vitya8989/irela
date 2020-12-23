@@ -585,7 +585,7 @@ if (parseInt($(window).width()) < 531) {
 	$('.contacts__windows').appendTo('.contacts');
 	$('.footer').appendTo('.contacts');
 	$('.contacts__write').addClass('active-window');
-}
+};
 $('.show-map').click(function(event) {
 	$('.contacts__windows').addClass('open-map');
 	$('.contacts__write').removeClass('active-window');
